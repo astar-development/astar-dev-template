@@ -6,9 +6,8 @@ Step-by-step guides for common development tasks in the AStar Dev OneDrive Sync 
 
 ## Adding a New Service
 
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
 All services must be interface-based for testability. Services are automatically registered via source generators using the `[Service]` attribute.
-</PROCESS_REQUIREMENTS>
 
 **Steps**:
 
@@ -96,9 +95,8 @@ All services must be interface-based for testability. Services are automatically
 
 ## Adding a New Repository
 
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
 Repositories abstract data access. One repository per aggregate/entity. Methods return domain models with `Result<T>` or `Option<T>`. DbContext is scoped to service lifetime.
-</PROCESS_REQUIREMENTS>
 
 **Steps**:
 
@@ -189,9 +187,9 @@ Repositories abstract data access. One repository per aggregate/entity. Methods 
 
 ## Adding a New ViewModel
 
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
+
 ViewModels must inherit from `ReactiveObject` and use reactive properties. All business logic delegated to services. ViewModels are UI state coordinators, not business logic containers.
-</PROCESS_REQUIREMENTS>
 
 **Steps**:
 
@@ -295,9 +293,9 @@ ViewModels must inherit from `ReactiveObject` and use reactive properties. All b
 
 ## Modifying Database Schema
 
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
+
 All schema changes must go through EF Core migrations. Never modify the database directly. Always review generated migrations before applying. Test migrations on a copy of production data before deploying.
-</PROCESS_REQUIREMENTS>
 
 **Steps**:
 

@@ -27,7 +27,7 @@ Primary mission: deliver secure, reliable, automated build/deploy/operate workfl
 
 Do not restate SSOT numeric thresholds; reference them.
 
-<CRITICAL_REQUIREMENT type="MANDATORY">
+## Critical Requirements
 
 - Infrastructure as code first.
 - Security and least privilege by default.
@@ -35,17 +35,13 @@ Do not restate SSOT numeric thresholds; reference them.
 - Deployment safety via validation, observability, rollback path.
 - Ask targeted clarifications for ambiguous infra requirements.
 
-</CRITICAL_REQUIREMENT>
-
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
 
 1. Define pipeline objective, triggers, and artifacts.
 2. Set minimal permissions at job level.
 3. Enforce build/test/scan gates before deploy.
 4. Add monitoring/alerting and rollback strategy.
 5. Validate with dry-run or targeted checks when available.
-
-</PROCESS_REQUIREMENTS>
 
 ## Scope
 

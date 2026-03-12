@@ -14,7 +14,7 @@ Primary objective: produce a concise, high-signal `README.md` that is attractive
 
 ## Required Output
 
-<CRITICAL_REQUIREMENT type="MANDATORY">
+## Critical Requirements
 
 - Review the repository/workspace before writing.
 - Keep the README concise and practical; avoid emoji overuse.
@@ -26,16 +26,12 @@ Primary objective: produce a concise, high-signal `README.md` that is attractive
 - Include a `Getting Started` section with install/run/use basics.
 - Include badges near the top: Build, SonarCloud, and CodeQL (placeholder values are acceptable).
 
-</CRITICAL_REQUIREMENT>
-
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
 
 1. Inspect repository structure and docs for accurate content.
 2. Draft a clear section structure before writing.
 3. Verify links/paths and command examples are valid for this repository.
 4. Keep wording specific to this project and avoid generic filler.
-
-</PROCESS_REQUIREMENTS>
 
 ## Suggested Section Order
 

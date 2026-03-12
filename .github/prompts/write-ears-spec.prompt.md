@@ -159,5 +159,3 @@ While <pre-condition>, if <trigger>, then the **<system-name>** shall **<system-
 ```
 
 Tell the user: Unwanted behavior requirements specify how the system should respond to undesired events or states.
-
-<!-- © Capgemini 2026 -->

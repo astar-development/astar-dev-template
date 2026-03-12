@@ -2,7 +2,6 @@
 /*
 Validates that `.github/copilot-instructions.md` contains required SSOT tags/sections.
 Checks:
-- Presence of XML-like tags: <CRITICAL_REQUIREMENT>, <WORKFLOW_ENFORCEMENT>, <NAMING_REQUIREMENTS>, <COMMIT_REQUIREMENTS>, <PROCESS_REQUIREMENTS>, <CODING_REQUIREMENTS>
 - Presence of anchor #quality-policy
 - Presence of key headings: Project Methodologies, Coding Standards
 Exit non-zero with a readable message if any check fails.
@@ -23,12 +22,6 @@ function main() {
   const content = fs.readFileSync(filePath, 'utf8');
 
   const requiredTags = [
-    '<CRITICAL_REQUIREMENT',
-    '<WORKFLOW_ENFORCEMENT',
-    '<NAMING_REQUIREMENTS',
-    '<COMMIT_REQUIREMENTS',
-    '<PROCESS_REQUIREMENTS',
-    '<CODING_REQUIREMENTS'
   ];
   const missingTags = requiredTags.filter(t => !content.includes(t));
   if (missingTags.length) {
@@ -37,7 +30,7 @@ function main() {
 
   if (!content.includes('# Quality & Coverage Policy') && !content.includes('# Quality & Coverage Policy'.toLowerCase())) {
     // Also allow anchor reference if heading case changes
-    if (!content.toLowerCase().includes('## quality & coverage policy') && !content.includes('#quality-policy')) {
+    if (!content.toLowerCase().includes('## quality & coverage policy') && !content.includes('#quality-policy') && !content.includes('# quality-policy')) {
       fail('Missing Quality & Coverage Policy section or anchor (#quality-policy).');
     }
   }
@@ -57,5 +50,3 @@ function main() {
 if (require.main === module) {
   main();
 }
-
-// © Capgemini 2025

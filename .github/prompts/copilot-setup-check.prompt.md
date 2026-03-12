@@ -180,5 +180,3 @@ This evaluation will assess:
 - Include rationale for all major recommendations
 
 Execute this evaluation systematically and provide a comprehensive report that enables the repository maintainers to optimize their Copilot and AI agent configuration effectively.
-
-<!-- © Capgemini 2026 -->

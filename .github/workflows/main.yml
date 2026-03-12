@@ -1,4 +1,6 @@
 name: Build the File App
+permissions:
+  contents: read
 
 on:
   workflow_dispatch:
@@ -19,8 +21,7 @@ env:
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 10.0.100
   WORKING_DIRECTORY: src/
-permissions:
-  contents: read
+
 jobs:
   test:
     name: Run tests (matrix)
@@ -31,7 +32,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -41,7 +42,7 @@ jobs:
           dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
 
       - name: Cache NuGet packages
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.nuget/packages
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.slnx') }}
@@ -91,7 +92,7 @@ jobs:
 
       - name: Upload TestResults artifact (contains coverage)
         if: success() || failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: testruns-${{ matrix.os }}
           path: TestResults
@@ -106,7 +107,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -123,7 +124,7 @@ jobs:
 
       - name: 🛠 Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
-        uses: actions/cache@v4.2.3
+        uses: actions/cache@v5.2.3
         with:
           path: ./.sonar/scanner
           key: ${{ runner.os }}-sonar-scanner
@@ -163,7 +164,7 @@ jobs:
           dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -177,7 +178,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download all coverage artifacts
         uses: actions/download-artifact@v4
@@ -192,7 +193,7 @@ jobs:
           reportgenerator -reports:"artifacts/**/coverage.cobertura.xml" -targetdir:coverage-merged -reporttypes:"Html;Cobertura;Opencover"
 
       - name: Upload merged coverage
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: coverage-merged
           path: coverage-merged

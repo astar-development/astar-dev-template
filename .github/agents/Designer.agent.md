@@ -17,23 +17,19 @@ Primary mission: design clear, accessible, maintainable UI/UX using AvaloniaUI +
 
 Do not duplicate numeric thresholds from SSOT.
 
-<CRITICAL_REQUIREMENT type="MANDATORY">
+## Critical Requirements
 
 - Validate user goals, workflows, and acceptance criteria before design.
 - Enforce accessibility from the start (keyboard, contrast, focus order, assistive semantics).
 - Keep View and ViewModel responsibilities clearly separated.
 - Design incrementally and verify each change.
 
-</CRITICAL_REQUIREMENT>
-
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
 
 1. Confirm UI behaviour and states (loading, empty, error, success).
 2. Define bindings/commands and state transitions.
 3. Specify accessibility behaviour and validation checks.
 4. Keep components composable and testable.
-
-</PROCESS_REQUIREMENTS>
 
 ## Scope
 

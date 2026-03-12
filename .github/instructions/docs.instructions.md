@@ -46,11 +46,10 @@ Prompting techniques: Input collection checklist with mandatory enforcement gate
 - Key features, behaviors, or decisions to cover
 - Existing related documentation or references
 
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
 
 - If any inputs are missing or ambiguous, ask targeted questions and pause drafting until clarified.
 - Confirm inferred inputs with the requester before proceeding.
-  </PROCESS_REQUIREMENTS>
 
 <!--
 Purpose: Define the review and approval lifecycle to ensure quality and accountability.
@@ -65,12 +64,11 @@ Prompting techniques: Stage-gated workflow steps; mandatory approval via enforce
 4. **Publishing**: Place approved docs in the appropriate folder (e.g., `docs/`, `docs/ADRs/`, `plans/`).
 5. **Archiving**: Establish a process for archiving outdated documents while ensuring they remain accessible for reference.
 
-<CRITICAL_REQUIREMENT type="MANDATORY">
+## Critical Requirements
 
 - Do not publish without owner approval.
 - Save documents in their canonical locations with appropriate filenames.
 - Update indices or README links when adding new documents.
-  </CRITICAL_REQUIREMENT>
 
 <!--
 Purpose: Provide a reusable scaffold for docs when the author does not specify a structure.
@@ -196,5 +194,3 @@ flowchart TD
 	G --> H[Link/update indexes]
 	H --> I[Plan maintenance cadence]
 ```
-
-<!-- © Capgemini 2026 -->

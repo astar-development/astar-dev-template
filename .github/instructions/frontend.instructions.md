@@ -15,10 +15,9 @@ COMPLIANCE: Treat rules below as defaults unless project overrides exist.
 
 # Frontend Instructions
 
-<CRITICAL_REQUIREMENT type="MANDATORY">
+## Critical Requirements
 
 - Use AvaloniaUI / ReactiveUI for new code and Windows / components.
-  </CRITICAL_REQUIREMENT>
 
 <!--
 SECTION PURPOSE: Universal rules for all frontend code.
@@ -85,11 +84,8 @@ SECTION PURPOSE: Enforce baseline quality gates.
 PROMPTING: XML block for machine-checkable rules.
 -->
 
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
 
 - Run lints and tests locally before PR.
 - Include accessibility checks (labels, keyboard nav, focus order) in reviews.
 - Avoid `dynamic` or `object` types; use proper types with nullable reference types (`?`) or explicit type parameters. If unavoidable, annotate with a TODO and reason.
-  </PROCESS_REQUIREMENTS>
-
-<!-- © Capgemini 2026 -->

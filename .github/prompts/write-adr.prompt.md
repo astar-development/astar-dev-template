@@ -84,5 +84,3 @@ The documentation file must follow the template specified in `docs/ADRs/adr-temp
 
 - If not already on a feature branch, create `adr/[brief-title-slug]` before saving.
 - Commit message should follow Conventional Commits, e.g.: `docs: add ADR NNNN <Decision Title>`.
-
-<!-- © Capgemini 2026 -->

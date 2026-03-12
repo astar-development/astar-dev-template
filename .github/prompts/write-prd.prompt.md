@@ -117,17 +117,13 @@ Where helpful, add short implementation notes and suggested acceptance tests tha
 - Use the `docs/PRDs/prd-template.md` as the canonical template. Ensure front matter or filename conventions used in this repo are followed.
 - If you save a file, prefer creating a branch and committing the file; if you cannot push, notify the user and provide exact git commands they can run locally.
 
-<PROCESS_REQUIREMENTS type="MANDATORY">
+## Process Requirements
 
 - If essential inputs are missing or ambiguous, ask targeted questions (≤3 at a time) before drafting.
 - Follow the PRD template strictly; do not omit required sections.
 - Keep success metrics measurable; map acceptance criteria to goals.
-  </PROCESS_REQUIREMENTS>
 
-<CRITICAL_REQUIREMENT type="MANDATORY">
+## Critical Requirements
 
 - Save under `docs/PRDs/` using `prd-[brief-title-slug].md` unless an existing convention overrides it.
 - Do not publish without confirming with the requester or PRD owner.
-  </CRITICAL_REQUIREMENT>
-
-<!-- © Capgemini 2026 -->

@@ -56,12 +56,11 @@ PROMPTING: Checklist for scenario completeness and clarity.
 SECTION PURPOSE: Enforce machine-checkable constraints to keep specs healthy.
 -->
 
-<CRITICAL_REQUIREMENT type='MANDATORY'>
+## Critical Requirements
 
 - Do not couple steps to UI structure (DOM/XPath). Use domain language.
 - Do not assert multiple outcomes per scenario; keep assertions focused.
 - Keep scenarios ≤ 10 steps to maintain readability and execution speed.
-  </CRITICAL_REQUIREMENT>
 
 <!--
 SECTION PURPOSE: Provide canonical examples for copy/paste and adaptation.
@@ -155,5 +154,3 @@ SECTION PURPOSE: Encourage living docs and CI-ready behavior.
 4. Wire into CI to run on PRs and gate merges on failures.
 5. Tag scenarios appropriately and configure CI to run fast suites on PRs (e.g., `@smoke`) and full suites nightly.
 6. Keep step definitions DRY; refactor when duplication creeps in.
-
-<!-- © Capgemini 2026 -->

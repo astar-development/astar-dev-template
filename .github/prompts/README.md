@@ -35,4 +35,3 @@ Within a prompt file, you can reference variables by using the `${variableName}`
 ## Official Docs
 
 - [Visual Studio Code custom prompt files](https://code.visualstudio.com/docs/copilot/customization/prompt-files)
-<!-- © Capgemini 2026 -->
