@@ -1,4 +1,4 @@
-# Contributing to AStar Dev OneDrive Sync Client
+# Contributing to AStar Dev repo
 
 Thank you for your interest in contributing! This document provides guidelines for contributing to the project.
 
@@ -9,18 +9,21 @@ Thank you for your interest in contributing! This document provides guidelines f
 Before submitting a pull request, ensure your code meets these requirements:
 
 ### Code Quality
+
 - [ ] Code follows naming conventions and style guide ([style-guidelines](instructions/style-guidelines.instructions.md))
 - [ ] All public members have XML documentation comments
 - [ ] No warnings (project has `TreatWarningsAsErrors = true`)
 - [ ] Code is properly formatted (use IDE formatter)
 
 ### Architecture & Design
+
 - [ ] New services/repositories have interfaces for testability
 - [ ] Business logic is abstracted behind interfaces (no `new` instantiation of services)
 - [ ] Dependencies injected via constructor parameters
 - [ ] Follows layered architecture (Core → Infrastructure → Presentation)
 
 ### Testing
+
 - [ ] TDD workflow followed (failing test committed in branch history)
 - [ ] Tests cover happy path and error cases
 - [ ] Unit tests for business logic (80%+ coverage)
@@ -28,16 +31,19 @@ Before submitting a pull request, ensure your code meets these requirements:
 - [ ] All existing tests pass locally
 
 ### Database Changes
+
 - [ ] Database changes have Entity Framework migrations
 - [ ] Migration reviewed and tested
 - [ ] Migration includes `Up()` and `Down()` methods for rollback
 
 ### Async/Concurrency
+
 - [ ] Async/await used throughout (no `Task.Wait()` or `Task.Result`)
 - [ ] `CancellationToken` parameters added to async methods
 - [ ] Proper disposal of resources (`using` statements)
 
 ### Documentation
+
 - [ ] README updated (if applicable)
 - [ ] API documentation added for public interfaces
 - [ ] Comments explain "why", not "what" (code should be self-explanatory)
@@ -46,11 +52,10 @@ Before submitting a pull request, ensure your code meets these requirements:
 
 ## Commit Message Style
 
-<COMMIT_REQUIREMENTS type="MANDATORY">
 Use conventional commits format for all commit messages. This enables automatic changelog generation and semantic versioning.
-</COMMIT_REQUIREMENTS>
 
 ### Format
+
 ```
 <type>(<scope>): <subject>
 
@@ -60,6 +65,7 @@ Use conventional commits format for all commit messages. This enables automatic 
 ```
 
 ### Types
+
 - **feat**: New feature
 - **fix**: Bug fix
 - **refactor**: Code refactoring (no functional changes)
@@ -70,6 +76,7 @@ Use conventional commits format for all commit messages. This enables automatic 
 - **style**: Code style changes (formatting, whitespace)
 
 ### Examples
+
 ```
 feat(sync): add delta query support for incremental sync
 
@@ -97,6 +104,7 @@ duplication across repositories. No functional changes.
 ```
 
 ### Best Practices
+
 - Use imperative mood: "add" not "added" or "adds"
 - Don't capitalize first letter of subject
 - No period at end of subject
@@ -108,9 +116,9 @@ duplication across repositories. No functional changes.
 
 ## GitHub Pull Request Creation
 
-<WORKFLOW_ENFORCEMENT type="MANDATORY">
+## Workflow Requirements
+
 All changes must go through pull requests. Direct commits to main branch are blocked by branch protection rules.
-</WORKFLOW_ENFORCEMENT>
 
 ### Creating a Pull Request
 
@@ -147,7 +155,7 @@ Use the GitHub Copilot tool:
 ```text
 {
   owner: "astar-development",
-  repo: "astar-dev-onedrive-sync-client",
+  repo: "astar-dev-mono",
   title: "feat: descriptive title using conventional commits",
   head: "feature/your-feature-name",
   base: "main",
@@ -188,14 +196,14 @@ Relates to #456
 
 ### Pull Request Guidelines
 
-<WORKFLOW_ENFORCEMENT type="MANDATORY">
+## Workflow Requirements
+
 - **PR Size**: < 300 lines of code changed, < 20 files (break down larger changes)
 - **Review Time**: Respond to reviewer feedback within 12 hours
 - **Merge Time**: PRs reviewed and merged within 24 hours (when possible)
 - **Approval**: At least one approval required before merge
 - **CI Gates**: All tests pass, no warnings, linter clean
 - **Merge Strategy**: Squash and merge for clean history
-</WORKFLOW_ENFORCEMENT>
 
 ### Large Changes / Refactors
 
@@ -207,6 +215,7 @@ For changes that exceed PR size limits:
 4. **Communicate**: Add detailed description explaining scope and approach
 
 **Feature Flag Example**:
+
 ```csharp
 public class FeatureFlags
 {
@@ -230,12 +239,12 @@ public async Task SyncAsync()
 
 ## Branching Strategy
 
-<NAMING_REQUIREMENTS type="MANDATORY">
+## Naming Strategies
+
 - **Feature branches**: `feature/<descriptive-name>` (e.g., `feature/add-file-watcher`)
 - **Bug fixes**: `fix/<descriptive-name>` (e.g., `fix/resolve-sync-conflict`)
 - **Refactors**: `refactor/<descriptive-name>` (e.g., `refactor/extract-interfaces`)
 - **Documentation**: `docs/<descriptive-name>` (e.g., `docs/update-readme`)
-</NAMING_REQUIREMENTS>
 
 ### Trunk-Based Development
 
