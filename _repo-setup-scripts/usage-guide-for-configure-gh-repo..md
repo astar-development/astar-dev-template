@@ -1,6 +1,6 @@
-How to use
+# How to use
 
-# Before running: 
+## Before running
 
 ```bash
 chmod +x configure-gh-repo.sh
@@ -8,7 +8,7 @@ chmod +x configure-gh-repo.sh
 
 Make sure you’re authenticated with gh auth login and have repo scope.
 
-# How to run:
+## How to run
 
 Run either:
 
@@ -17,13 +17,14 @@ Run either:
 ```bash
     ./configure-gh-repo.sh
 ```
+
 - Or explicitly:
 
 ```bash
     ./configure-gh-repo.sh owner/repo
 ```
 
-# Dry Run
+## Dry Run
 
 Whichever approach you decide to use for running this script, you can add:
 
